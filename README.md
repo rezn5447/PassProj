@@ -63,11 +63,11 @@ Now, let's actually implement logging in by allowing users to submit their login
 If the `session` hash and/or how to use it is unclear, read the [using sessions section][using sessions] of the Sinatra documentation.  If it is still unclear after reading the documentation, ask for help from a staff member.
 
 
-### Release 3:  Implement Logging Out
+### Release 2:  Implement Logging Out
 If users can login, we'll also want to allow them to logout.  Implement a controller method that will log a user out when they visit it.  This will most likely involve deleting some content from the `session` hash.
 
 
-### Release 4:  Implement Authorization
+### Release 3:  Implement Authorization
 To this point, we've been dealing with *authentication*:  answering the question, "Who are you?"  Now we're going to handle *authorization*:  answering the question, "What do you have permission to do?"
 
 In applications there are different use cases for authorization.  For example, an application might have a group of administrators with special privileges.  Perhaps they can edit content, delete posts, etc., while other users cannot.  In our application, we'll authorize all logged in users to view the content of our site.  If users have not logged in, they will not be authorized to view the content.
