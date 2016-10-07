@@ -5,5 +5,6 @@ class CreateCommanders < ActiveRecord::Migration
       t.string  :pw_hash
 
       t.timestamps(null: false)
+    end
   end
 end

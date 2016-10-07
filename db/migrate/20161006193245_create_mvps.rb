@@ -7,7 +7,8 @@ class CreateMvps < ActiveRecord::Migration
       t.string  :last_name
       t.string  :kills
       t.string  :lucky
-      t.add_foreign_key :mvps, :commanders
-      t.timestamps
+      t.string  :skills
+      t.timestamps(null: false)
+    end
   end
 end
