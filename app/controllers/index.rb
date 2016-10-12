@@ -10,11 +10,17 @@ get '/session-clearer' do
   p session
   session.clear
   p session
-
 end
 
 get '/login' do
   erb :login
+end
+
+get '/sessions/new' do
+  p session
+  session.clear
+  p session
+  erb :index
 end
 
 # post '/login' do
