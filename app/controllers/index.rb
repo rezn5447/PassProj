@@ -6,6 +6,12 @@ end
 get '/session-viewer' do
   session.inspect
 end
+get '/session-clearer' do
+  p session
+  session.clear
+  p session
+
+end
 
 get '/login' do
   erb :login
@@ -24,8 +30,9 @@ post '/login' do
   @commander = Commander.find_by_email(params[:email])
   if @commander.password == params[:password]
        session[:id] = @commander.id
-      redirect '/logged_in'
+      redirect '/commanders/show"'
   else
+    @errors = "No User by That name"
     erb :"login"
   end
 end

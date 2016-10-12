@@ -3,7 +3,7 @@ get '/commanders' do
 end
 
 get '/commanders/new' do
-  erb :'commanders/new'
+  erb :'Commanders/new'
 end
 
 get '/commanders/login' do
