@@ -11,11 +11,23 @@ get '/mvp/login' do
 end
 
 get '/mvp/:id' do
-  @commander = MVP.find(params[:id])
+  @mvp = MVP.find(params[:id])
   erb :"mvp/show"
 end
 
 get '/mvp/:id/edit' do
-  @commander = MVP.find(params[:id])
+  @mvp = MVP.find(params[:id])
   erb :"mvp/edit"
+end
+ post 'mvps' do
+  p "*" * 70
+  p params
+  p "*" * 70
+  @mvp = MVP.new(params[:mvp])
+  p @mvp
+  if @mvp.save
+    redirect "/mvps/show"
+  else
+    redirect "/"
+  end
 end
