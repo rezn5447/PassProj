@@ -11,7 +11,6 @@ end
 get '/commanders/:id' do
   @commander = Commander.find(params[:id])
   p @commander
-  "We did the redirect"
   erb :"commanders/show"
 end
 
@@ -22,16 +21,12 @@ end
 
 # all this should work
 post "/commanders" do
-  p "*" * 70
-  p params
-  p "*" * 70
-  @commander = Commander.new(params[:commander])
+ @commander = Commander.new(params[:commander])
   p @commander
   if @commander.save
     p "*" * 70
     p @commander.id
     p "*" * 70
-    p "You have been saved"
     redirect "/commanders/#{@commander.id}"
   else
     @errors = @commander.errors.full_messages
