@@ -2,6 +2,10 @@ require 'bcrypt'
 class Commander < ActiveRecord::Base
   # Remember to create a migration!
   ### NOTES FOR CREATION ########
+  has_many MVPs:
+
+
+
   include BCrypt
 
    def password
