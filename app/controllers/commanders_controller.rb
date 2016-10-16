@@ -6,8 +6,6 @@ get '/commanders/new' do
   erb :'commanders/new'
 end
 
-
-
 get '/commanders/:id' do
   @commander = Commander.find(params[:id])
   p @commander

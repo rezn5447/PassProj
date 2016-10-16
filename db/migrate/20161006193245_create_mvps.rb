@@ -6,8 +6,9 @@ class CreateMvps < ActiveRecord::Migration
       t.string  :nick_name
       t.string  :last_name
       t.string  :kills
-      t.string  :lucky
-      t.string  :skills
+
+      t.integer :commander_id
+
       t.timestamps(null: false)
     end
   end
