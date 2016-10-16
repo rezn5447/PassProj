@@ -1,9 +1,13 @@
 helpers do
-		def current_user
-			@current_user ||= session[:user_id] && Commander.find(session[:user_id])
+		def current_commander
+			@current_commander ||= session[:commander_id] && Commander.find(session[:commander_id])
 		end
 
-		def login(user)
-			session[:user_id] = user.id
+		def login(commander)
+			session[:commander_id] = commander.id
 		end
+
+    def logout
+      session[:commander_id] = nil
+    end
 	end

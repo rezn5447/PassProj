@@ -1,7 +1,10 @@
+# sessions new
 get '/sessions/new' do
   erb :'sessions/new'
 end
 
+
+# sessions create
 post '/sessions' do
   @commander = Commander.find_by_email(params[:email])
 
@@ -16,7 +19,7 @@ post '/sessions' do
   end
 end
 
-# delete '/sessions/:id' do
+# sessions destroy
 delete '/sessions' do
   # session[:id] = nil
   logout

@@ -1,8 +1,11 @@
-<% # THIS IS A USER CHECK THAT WILL SHOW USERNAME OR LOGIN BUTTON %>
+<!-- THIS IS A User CHECK THAT WILL SHOW commander NAME OR LOGIN BUTTON -->
 
-<% if current_user %>
-  <a href=/commanders/<%= current_user.id %>><%= current_user.first_name %> <%= current_user.last_name %></a> |
-  <a href=/sessions/delete>logout</a> |
+<% if current_commander %>
+  <a href=/commanders/<%= current_commander.id %>><%= current_commander.name %></a> |
+  <form  action="/sessions" method="post">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="logout">
+  </form>
   <a href=/>home</a>
 <% else %>
   <a href=/commanders/new>register</a> |
