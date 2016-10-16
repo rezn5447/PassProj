@@ -26,4 +26,9 @@ post "/commanders" do
     @errors = @commander.errors.full_messages
     erb :"commanders/new"
   end
+
+
+
+
+
 end
