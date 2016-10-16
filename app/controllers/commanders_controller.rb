@@ -34,13 +34,13 @@ post "/commanders" do
     erb :'clips/show'
   end
 
-  get '/commanders/:commander_id/clips/' do
+  get '/commanders/:commander_id/clips' do
     @clips = Commander.clips
     erb :'clips/index'
   end
 
-  post '/commanders/:commander_id/clips/' do
-    @commander =  Commander.find(params[:id])
+  post '/commanders/:commander_id/clips' do
+    @commander =  Commander.find(params[:commander_id])
     @clip = Clip.new(@commander.id)
     if @clip.save
       p @clip.id
