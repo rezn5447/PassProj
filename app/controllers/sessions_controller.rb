@@ -12,7 +12,6 @@ post '/sessions' do
     # session[:id] = @commander.id
     login(@commander)
     redirect '/'
-
   else
     @errors = ["Name && Password not found."]
     erb :'sessions/new'
