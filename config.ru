@@ -11,7 +11,6 @@ configure do
   # Set the views to
   set :views, File.join(Sinatra::Application.root, "app", "views")
 
-
   # Set the public folders to
   set :comanders_folder, File.join(Sinatra::Application.root, "public", "commanders")
 end

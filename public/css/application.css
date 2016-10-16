@@ -1,5 +1,4 @@
 #header {
-
   width: 300px;
   height: 50px;
   margin-top: 50px;
@@ -15,7 +14,6 @@
 }
 
 #com_main {
-
   width: 90%;
   height: 90%;
   background: #258dc8; /* Old browsers */
@@ -27,12 +25,16 @@
 
 
 #mvp-container {
-  margin: 15px;
+  margin: 20px;
+  width: 50;
+  }
+
+#mvp_upload{
+  margin: 20px;
 
 }
 
 #mvp_img {
-
   width:  300px;
   height: 400px;
 
