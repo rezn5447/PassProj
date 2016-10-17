@@ -15,3 +15,7 @@ get 'commander/:commander_id/mvp/:id/edit' do
   @commander = MVP.find(params[:id])
   erb :"mvp/edit"
 end
+
+
+
+# post 'commander/:commander_id/mvp/:id'

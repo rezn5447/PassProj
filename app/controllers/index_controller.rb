@@ -1,4 +1,8 @@
 get '/' do
-  # Look in app/views/index.erb
+  if current_commander
+    @commander = Commander.find(session[:commander_id])
+    redirect "/commanders/#{@commander.id}"
+  else
   erb :index
+  end
 end
