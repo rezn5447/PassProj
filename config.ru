@@ -13,6 +13,8 @@ configure do
 
   # Set the public folders to
   set :comanders_folder, File.join(Sinatra::Application.root, "public", "commanders")
+  # set Paperclip
+  Paperclip.options[:command_path] = "/usr/local/bin/"
 end
 
 run Sinatra::Application
